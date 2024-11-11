@@ -1,0 +1,139 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.container-login{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 360px 1fr;
+    grid-template-areas: "login-title" "login-form" "login-footer";
+}
+
+/* MISE A PAGE DU DOCUMENT */
+/* LOGIN TITLE */
+.login-title h1{
+    color: #1877f2;
+    font-size: 4rem;
+    margin: 15px;
+}
+
+.login-title p{
+    font-size: 1.5rem;
+}
+
+.login-title{
+    grid-area: login-title;
+    padding: 0 20px;
+}
+
+/* ********************************* */
+
+/* *************** LOGIN FORM ************** */
+.login-form{
+    grid-area: login-form;
+    /* border: 1px solid black; */
+    margin: 0 20px;
+    width: 340px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+}
+
+.login-form .form-row{
+    margin: 5px 0;
+}
+
+.login-form .form-row input{
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    width: 95%;
+}
+
+/* ======================================= */
+
+/* ------------------BUTTON ---------------------- */
+
+.form-button button{
+    border: none;
+    padding: 15px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-form .form-button .bt-login-submit{
+    background-color: #1877f2;
+    color: white;
+    width: 95%;
+}
+
+
+.login-form .form-button .bt-login-create-account{
+    background-color: #42b72a;
+    color: white;
+    width: 70%;
+}
+
+/* ============================================= */
+
+/* FORM INFO */
+
+.login-form .form-infos p a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #1877f2;
+}
+
+/* ----------------------- */
+
+/* ++++++++++++++++ DIVIDER ++++++++++++++++++++++ */
+
+.login-form .divider{
+    border: 0.1px solid gray;
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+.login-footer{
+    grid-area: login-footer;
+    width: 340px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.login-footer a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+@media screen and (min-width:900px) {
+    .container-login{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 200px;
+        grid-template-areas: "login-title login-form" "none login-footer";
+        padding: 200px 50px;
+        height: 75vh;
+    }
+
+    .login-title{
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:1450px) {
+    .container-login{
+        grid-template-columns: 600px 400px;
+        justify-content: center;
+    }
+}
